@@ -87,7 +87,7 @@ public class DemoTest {
  */
     @Test
     public void findUserDemo(){
-    Integer i = 6;
+        Integer i = 6;
         List<User> userDemo = mapper.findUserDemo(i);
         System.out.println(userDemo);
 
