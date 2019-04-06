@@ -58,7 +58,7 @@ public class RoleTest {
     public void testFindRoles(){
         List<Role> role = mapper.findRole();
         for (Role role1 : role) {
-            System.out.println(role1);
+            System.out.println(role1.getAddress());
         }
     }
 }
