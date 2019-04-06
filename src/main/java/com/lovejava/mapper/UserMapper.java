@@ -1,6 +1,7 @@
 package com.lovejava.mapper;
 
 
+import com.lovejava.domain.Role;
 import com.lovejava.domain.User;
 
 import java.util.List;
@@ -26,4 +27,8 @@ public interface UserMapper {
      * 用户角度1对多查询
      */
     List<User> findUserDemo(Integer id);
+    /**
+     * 延迟查询
+     */
+    List<User> getUserByUserId(Integer i);
 }
