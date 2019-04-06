@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--取别名-->
+    <typeAliases>
+        <package name="com.lovejava.domain"></package>
+    </typeAliases>
+    <!--配置环境-->
+    <environments default="de1">
+        <environment id="de1">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="username" value="root"></property>
+                <property name="password" value="root"></property>
+                <property name="url" value="jdbc:mysql:///mybatis"></property>
+                <property name="driver" value="com.mysql.jdbc.Driver"></property>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--加载配置文件-->
+    <mappers>
+        <package name="com.lovejava.mapper"></package>
+    </mappers>
+</configuration>
