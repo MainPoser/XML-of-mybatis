@@ -24,8 +24,9 @@ public class DemoTest {
     private InputStream is;
     private SqlSession sqlSession;
     private UserMapper mapper;
+
     @Before
-    public void before(){
+    public void before() {
         try {
             //将主配值文件加载成流
             is = Resources.getResourceAsStream("SqlMapConfig.xml");
@@ -40,8 +41,9 @@ public class DemoTest {
             e.printStackTrace();
         }
     }
+
     @After
-    public void after(){
+    public void after() {
         try {
             is.close();
         } catch (IOException e) {
@@ -54,27 +56,29 @@ public class DemoTest {
      * 通过地址查询用户
      */
     @Test
-    public void findUserByAddr(){
-    String s = "向往太阳";
+    public void findUserByAddr() {
+        String s = "向往太阳";
         List<User> users = mapper.findUserByAddr(s);
         System.out.println(users);
     }
+
     /**
      * 通过不确定的User对象查询对象
      */
     @Test
-    public void findUser(){
+    public void findUser() {
         User user = new User();
         user.setSex("男");
         /*user.setAddress("祭祀场");*/
         List<User> user1 = mapper.findUser(user);
         System.out.println(user1);
     }
+
     /**
      * 参数是集合的查询方法
      */
     @Test
-    public void findByRang(){
+    public void findByRang() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -82,11 +86,12 @@ public class DemoTest {
         List<User> users = mapper.findByRang(list);
         System.out.println(users);
     }
+
     /**
      * 1对多
      */
     @Test
-    public void findUserDemo(){
+    public void findUserDemo() {
         Integer i = 6;
         List<User> userDemo = mapper.findUserDemo(i);
         System.out.println(userDemo);
