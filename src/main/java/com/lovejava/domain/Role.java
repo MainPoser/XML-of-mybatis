@@ -10,14 +10,14 @@ public class Role {
     private Integer id;
     private String work;
     private String address;
-    private List<User> users;
+    private User user;
 
-    public List<User> getUsers() {
-        return users;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Integer getId() {
@@ -50,7 +50,7 @@ public class Role {
                 "id=" + id +
                 ", work='" + work + '\'' +
                 ", address='" + address + '\'' +
-                ", users=" + users +
+                ", users=" + user +
                 '}';
     }
 }

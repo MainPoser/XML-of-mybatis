@@ -4,8 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lovejava.mapper.RoleMapper">
 
-    <select id="findRole" resultMap="role">
+    <select id="findRole" resultMap="resultMAP01">
         select * from role
     </select>
+    <resultMap id="resultMAP01" type="role">
+        <id property="id" column="id"></id>
+        <result property="work" column="work"></result>
+        <result property="address" column="address"></result>
+
+        <association property="user" select="com.lovejava.mapper.UserMapper.getUserByUserId" column="id"></association>
+    </resultMap>
 
 </mapper>

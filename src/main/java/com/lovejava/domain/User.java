@@ -29,7 +29,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", birthday='" + birthday + '\'' +
                 ", sex='" + sex + '\'' +
-                ", address='" + address + '\'' +"list:"+list+
+                ", address='" + address + '\'' +", list:"+list+
                 '}';
     }
 
