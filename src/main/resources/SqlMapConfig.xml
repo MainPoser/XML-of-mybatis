@@ -4,6 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
+        <!--开启二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
         <!--开启延迟加载-->
         <setting name="lazyLoadingEnabled" value="true"/>
         <!--当开启时，任何方法的调用都会加载该对象的所有属性。否则，每个属性会按需加载-->
