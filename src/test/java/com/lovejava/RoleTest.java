@@ -4,7 +4,6 @@ package com.lovejava;
 
 import com.lovejava.domain.Role;
 import com.lovejava.mapper.RoleMapper;
-import com.lovejava.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
