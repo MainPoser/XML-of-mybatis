@@ -3,9 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lovejava.mapper.UserMapper">
+
     <select id="findUserByAddr" resultType="user" parameterType="string">
         select * from user where address = #{address}
     </select>
+
     <select id="findUser" parameterType="user" resultType="user">
         select * from USER
         <where>
@@ -17,6 +19,7 @@
           </if>
         </where>
     </select>
+
     <!--参数是集合-->
     <select id="findByRang" resultType="user" parameterType="int">
 
@@ -41,9 +44,11 @@
             <result property="address" column="address"></result>
         </collection>
     </resultMap>
+
     <select id="findUserDemo" parameterType="int" resultMap="userMap">
         SELECT u.id uid,u.`address`,u.`username`,u.`birthday`,u.`sex`,r.* FROM USER u,role r,user_role ur WHERE ur.`rid`=r.`id` AND ur.`uid`=u.`id` AND u.`id`=#{id}
     </select>
+
     <select id="getUserByUserId" parameterType="int" resultType="User">
     SELECT * from USER WHERE id=#{id}
     </select>

@@ -1,16 +1,17 @@
 package com.lovejava.domain;
 
-import java.util.List;
+import java.io.Serializable;
 
 /**
  * @author:tianyao
  * @date:2019-04-04 14:33
  */
-public class Role {
+public class Role implements Serializable {
     private Integer id;
     private String work;
     private String address;
     private User user;
+
 
     public User getUser() {
         return user;

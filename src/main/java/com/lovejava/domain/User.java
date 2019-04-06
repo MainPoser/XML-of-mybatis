@@ -1,12 +1,13 @@
 package com.lovejava.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * @author:tianyao
  * @date:2019-04-04 14:33
  */
-public class User {
+public class User implements Serializable {
     private Integer id;
     private String username;
     private String birthday;

@@ -55,7 +55,7 @@ public class DemoTest {
      */
     @Test
     public void findUserByAddr(){
-    String s = "祭祀场";
+    String s = "向往太阳";
         List<User> users = mapper.findUserByAddr(s);
         System.out.println(users);
     }
