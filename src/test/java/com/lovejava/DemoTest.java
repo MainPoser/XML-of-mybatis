@@ -82,9 +82,9 @@ public class DemoTest {
         List<User> users = mapper.findByRang(list);
         System.out.println(users);
     }
-/**
- * 1对多
- */
+    /**
+     * 1对多
+     */
     @Test
     public void findUserDemo(){
         Integer i = 6;
