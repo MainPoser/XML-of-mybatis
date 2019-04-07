@@ -12,13 +12,13 @@
     <select id="findUser" parameterType="user" resultType="user">
         select * from USER
         <where>
-          <if test="sex !=null and sex != ''">
-              and sex = #{sex}
-          </if>
-          <if test="address != null and address != ''">
-              and address = #{address}
-          </if>
-        </where>
+        <if test="sex !=null and sex != ''">
+            and sex = #{sex}
+        </if>
+        <if test="address != null and address != ''">
+            and address = #{address}
+        </if>
+    </where>
     </select>
 
     <!--参数是集合-->
